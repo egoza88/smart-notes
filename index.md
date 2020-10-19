@@ -1,37 +1,12 @@
-## Welcome to GitHub Pages
+## Welcome to Smart Notes GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/egoza88/smart-notes/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+### About
+The application for Note Taking by Zettelkasten Method.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Zettelkasten Method is an advanced way of taking notes.  Zettelkasten - (zettel=note + kasten=box). A zettelkasten consists of many individual notes with ideas and other short pieces of information that are taken down as they occur or are acquired. The notes are numbered hierarchically, so that new notes may be inserted at the appropriate place, and contain metadata to allow the note-taker to associate notes with each other. For example, notes may contain tags that describe key aspects of the note, and they may reference other notes. The method not only allows a researcher to store and retrieve information related to their research, but also intends to enhance creativity. Cross-referencing notes through tags allows the researcher to perceive connections and relationships between individual items of information that may not be apparent in isolation. These emergent aspects of the method make the zettelkasten somewhat similar to a neural network with which one may "converse".
 
-### Markdown
+### Features
+Integration with popular applications for taking notes, such as Notion, Evernote etc. via REST API.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/egoza88/smart-notes/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### More
+[Medium](https://medium.com/@taskade/the-zettelkasten-method-for-note-taking-in-collaborative-software-e0f5b6bb9302
