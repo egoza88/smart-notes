@@ -31,4 +31,9 @@ public class NotesRestController {
     Note newNote(@RequestBody Note newNote) {
         return noteService.saveOrUpdateNote(newNote);
     }
+
+    @DeleteMapping("/delete/{id}")
+    void deleteEmployee(@PathVariable String id) {
+        noteService.deleteNoteById(id);
+    }
 }
