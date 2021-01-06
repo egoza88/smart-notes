@@ -10,6 +10,7 @@ import java.util.List;
 
 @org.springframework.web.bind.annotation.RestController
 @RequestMapping("/notes")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class NotesRestController {
 
     @Autowired
