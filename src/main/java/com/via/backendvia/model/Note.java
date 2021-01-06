@@ -26,4 +26,11 @@ public class Note {
         this.header = header;
         this.content = content;
     }
+
+    public Note(@NonNull String id, long timestamp, String header, String content) {
+        this.id = id;
+        this.timestamp = timestamp;
+        this.header = header;
+        this.content = content;
+    }
 }

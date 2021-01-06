@@ -1,4 +1,4 @@
-package com.via.backendvia;
+package com.via.backendvia.controllers;
 
 import com.via.backendvia.model.Note;
 import com.via.backendvia.service.NoteService;
