@@ -29,7 +29,7 @@ public class NoteServiceImpl implements NoteService {
 
     @Override
     public Note saveOrUpdateNote(Note note) {
-        if(note.getContent().startsWith("[random]")) {
+        if(note.getContent().startsWith("<p>[random]")) {
             updateNote(note);
         }
         return noteRepository.save(note);
@@ -42,7 +42,10 @@ public class NoteServiceImpl implements NoteService {
 
     private void updateNote(Note note) {
         try{
-            int num = Integer.parseInt(note.getContent().replace("[random]", "").trim());
+            int num = Integer.parseInt(note.getContent()
+                    .replace("<p>[random]", "")
+                    .replace("</p>", "")
+                    .trim());
 
             OkHttpClient client = new OkHttpClient();
 
