@@ -30,7 +30,7 @@ public class NoteServiceImpl implements NoteService {
     @Override
     public Note saveOrUpdateNote(Note note) {
         if(note.getContent().startsWith("[random]")) {
-//            updateNote(note);
+            updateNote(note);
         }
         return noteRepository.save(note);
     }
