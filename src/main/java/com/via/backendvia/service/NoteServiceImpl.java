@@ -1,10 +1,14 @@
 package com.via.backendvia.service;
 
+import com.squareup.okhttp.OkHttpClient;
+import com.squareup.okhttp.Request;
+import com.squareup.okhttp.Response;
 import com.via.backendvia.model.Note;
 import com.via.backendvia.repository.NoteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.io.IOException;
 import java.util.List;
 
 @Service
@@ -25,11 +29,32 @@ public class NoteServiceImpl implements NoteService {
 
     @Override
     public Note saveOrUpdateNote(Note note) {
+        if(note.getContent().startsWith("[random]")) {
+            updateNote(note);
+        }
         return noteRepository.save(note);
     }
 
     @Override
     public void deleteNoteById(String id) {
         noteRepository.deleteById(id);
+    }
+
+    private void updateNote(Note note) {
+        try{
+            int num = Integer.parseInt(note.getContent().replace("[random]", "").trim());
+
+            OkHttpClient client = new OkHttpClient();
+
+            Request request = new Request.Builder()
+                    .url("https://loripsum.net/api/"+num)
+                    .get()
+                    .build();
+
+            Response response = client.newCall(request).execute();
+            String responseBody = response.body().string();
+            note.setContent(responseBody);
+        }catch (NumberFormatException | IOException ignored) {
+        }
     }
 }
